@@ -11,7 +11,7 @@ export default function Home() {
       <Header image={banner} />
       <section className="info-section">
         <p>Music teachers serving the Treasure Valley</p>
-        <h5>Now <Link href="/NewStudent" passHref legacyBehavior>enrolling</Link> for Fall 2024!</h5>
+        <h5>Now <Link href="/new-student" passHref legacyBehavior>enrolling</Link> for Fall 2024!</h5>
       </section>
       <section className="blurb-section">
         <Blurb link="/lessons" imgURL={'lessonblurb'} text="Lesson Information" altText="Lesson Blurb Image"></Blurb>
