@@ -1,0 +1,691 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: lemonchiffon;
+}
+
+.app {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.cursive {
+  font-family: "Playwrite TZ", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  .banner .image {
+    max-width: 100vw;
+    max-height: 40vh;
+  }
+  .banner h1 {
+    top: 5%;
+    left: 15%;
+  }
+  .menu {
+    width: 20vw;
+  }
+  .info-section {
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .blurb-section {
+    flex-direction: row;
+    margin: 50px 0px 50px 0px;
+    height: 33vh;
+  }
+  .blurb .blurbimage {
+    width: 79%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px
+  }
+  .blurb-component {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .blurb-component .list {
+    width: 50vw;
+    flex-direction: column;
+  }
+  .blurb-component .blurb-component-image {
+    height:200px;
+    width: auto;
+  }
+  .blurb-component p {
+    width: 33vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 33vh;
+  }
+  footer .social-media {
+    margin-top: -25px;
+  }
+  footer .social-icons {
+    justify-content: space-evenly;
+  }
+  .about-us {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .bio {
+    width: 33vw;
+  }
+  form {
+    min-width: 500px;
+    width: fit-content;
+  }
+  form input {
+    height: 30px;
+  }
+  form select {
+    width: 150px;
+    height: 30px;
+  }
+  form textarea {
+    height: 200px;
+  }
+  form button {
+    height: 50px;
+  }
+  form button {
+    border-radius: 10px;
+  }
+  form .checkbox-section {
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+  form .checkbox-section h5 {
+    font-size: 1.1em;
+    margin: 0px 10px 0px 0px;
+  }
+  form .checkbox-section .checkbox-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  form .checkbox-container h6 {
+    font-size: 0.9em;
+  }
+  form h2 {
+    margin-bottom: 0px;
+  }
+  form .checkbox-container input {
+    margin: 0px 10px 0px 10px;
+  }
+  .child-form .child-inputs {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .portal-message-box {
+  margin-top: 80%; /* Adjust as needed to place it in the visible area */
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner .image {
+    max-width: 100%;
+    max-height: 300px ;
+  }
+  .banner h1 {
+    top: 50%;
+    left: 50%;
+  }
+  .blurb-section {
+    flex-direction: row;
+  }
+  .blurb .blurbimage {
+    width: 79%;
+    height: 79%;
+  }
+}
+
+/* Phone styles */
+@media (max-width: 767px) {
+  .lesson-header {
+    font-size: x-large;
+  }
+  .burger {
+    margin-left: 10px;
+  }
+  .banner .image {
+    max-width: 100%;
+    max-height: 200px;
+  }
+  .banner h1 {
+    font-size: large;
+    top: 8%;
+    left: 15%;
+  }
+  .menu {
+    width: 50vw;
+  }
+  .info-section {
+    font-size: small;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .info-section .image {
+    display: none;
+  }
+  .blurb-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .blurb {
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+    margin: 5px 10px 20px 10px;
+  }
+  .blurb .blurbimage {
+    width: 100px;
+    height: 100px;
+    padding: 10px 5px 10px 5px;
+  }
+  .blurb-component {
+    justify-content: space-evenly;
+  }
+  .blurb-component .blurb-component-image {
+    display: none;
+  }
+  .blurb-component .list {
+    margin: 0px 20px 0px 20px;
+    height: fit-content;
+    flex-direction: column;
+  }
+  .blurb-component p {
+    width: 50vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .faq-section a{
+    font-size: 10.8pt;
+  }
+  footer .social-icons {
+    justify-content: baseline;
+  }
+  .about-us {
+    flex-direction: column;
+  }
+  .bio {
+    width: 80vw;
+  }
+  form {
+    width: 80vw;
+  }
+  form h6 {
+    margin-left: 5px;
+  }
+  form input {
+    height: 30px;
+  }
+  form .checkbox-section {
+    flex-direction: none;
+  }
+  form .checkbox-section .checkbox-container {
+    /* flex: 1 0 50%; */
+    /* flex-direction: row; */
+    align-items: center;
+    margin-right: 5px;
+    padding: 0px;
+  }
+  form .checkbox-section .checkbox-container input {
+    margin-left: 10px;
+  }
+  form textarea {
+    height: 200px;
+  }
+  form button {
+    height: 50px;
+  }
+  form button {
+    height: 80px;
+    border-radius: 10px;
+  }
+}
+
+.banner {
+  padding: 0;
+  margin: 0;
+  min-height: 200px;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.banner h1 {
+  position: absolute;
+  color: white;
+  font-family: 'Lucida Handwriting', cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.burger {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  color: white;
+  z-index: 999;
+}
+
+.burger p {
+  font-size: xx-large;
+  font-size-adjust: inherit ;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 10px;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  width: 100vw;
+  margin: 20px 0px 20px 0px;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.info-section p {
+  font-family: 'Lucida Handwriting', cursive;;
+}
+
+.info-section .image {
+  border-radius: 10%;
+}
+
+.blurb-section {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: auto;
+}
+
+.blurb {
+  display: block;
+  width: auto;
+  height: fit-content;
+  text-align: center;
+  margin: 0px 20px 0px 20px;
+}
+
+.blurb .blurbimage {
+  border-radius: 10%;
+}
+
+.blurb:hover {
+  box-shadow: 0 2px 4px rgba(1, 1, 0, 2);
+  border-radius: 10%;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.blurb:active {
+  box-shadow: 0 2px 2px rgba(1, 1, 0, 1);
+  transform: translateY(+1px);
+}
+
+footer {
+  width: 100vw;
+  background-color: rgba(250, 246, 27, 0.216);
+}
+
+footer .address {
+  min-width: auto;
+  max-width: fit-content;
+  margin: 0px 20px 0px 20px;
+}
+footer h3 {
+  padding: 0px;
+  margin: 15px 0px 10px 0px;
+}
+
+footer .address h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+footer .faq-section {
+  margin: 0px 20px 0px 20px;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+footer .social-media {
+  margin: 0px 20px 0px 20px;
+}
+
+footer .social-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns content at the top */
+  z-index: 997; /* Ensure it's above other content */
+  overflow-y: auto; /* Enables scrolling within the overlay */
+}
+
+
+
+.menu {
+  position: absolute;
+  padding-top: 80px;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  z-index: 998;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li {
+  margin-top: 10px;
+}
+
+.menu ul li:hover {
+  cursor: pointer;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  color: grey;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+  transform: translateX(-100%);
+}
+
+.fade-in {
+  animation: fadeIn 0.7s forwards;
+  opacity: 0;
+}
+
+.blurb-component {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 33vh;
+  width: 100vw;
+}
+
+.blurb-component .blurb-component-image {
+  border-radius: 10%;
+}
+
+.blurb-component .list {
+  display: flex;
+  align-items: baseline;
+}
+
+.blurb-component .list ul {
+padding: 15px;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 33vh;
+}
+.call-to-action a {
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  text-decoration: none;
+  color: black;
+}
+
+.call-to-action a:hover {
+  text-decoration: none;
+}
+
+.call-to-action a:active {
+  text-decoration: none;
+  color: black;
+  transform: translateY(2px);
+}
+
+.accordian {
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px
+}
+
+.accordian:hover {
+  cursor: pointer;
+}
+
+.accordian .carrot {
+  position: absolute;
+  padding-left: 5px;
+}
+
+.accordian .question {
+  padding-left: 20px;
+}
+
+.accordian p {
+  margin-left: 40px;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+}
+
+.bios {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-image {
+  width: auto;
+  height: 60vh;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+
+.bio {
+  height: auto;
+}
+
+.bio h3 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.bio h4 {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.policy {
+  margin-left: 10px;
+}
+
+.copyrite {
+  text-align: center;
+  background-color: rgba(250, 246, 27, 0.216);
+  padding-bottom: 10px;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  background-color: rgba(201, 250, 24, 0.216);
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+form h3 {
+  margin: 10px 0px 0px 0px;
+  padding: 0px;
+}
+
+form h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+form input {
+  margin: 10px 0px 10px 0px;
+  border-radius: 10px;
+}
+
+form textarea {
+  margin: 10px 0px 10px 0px;
+  border-radius: 10px;
+  border: 2px solid black
+}
+
+form .checkbox-section {
+  display: flex;
+  padding: 0px;
+}
+
+form .checkbox-section .checkbox-container {
+  display: flex;
+  width: fit-content;
+  height: 100%;
+}
+
+form button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+form button:disabled {
+  background-color: red;
+  opacity: 50%;
+}
+
+.client {
+  border-bottom: 1px solid black;
+  margin: 0px 0px 10px 0px;
+}
+
+.child-form {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.child-form .child-inputs {
+  display: flex;
+}
+
+.child-form .child-inputs .child-input {
+  width: 150px;
+}
+.child-input input {
+  width: 90%;
+}
+
+form select {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.thank-you {
+  width: 100%;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-wrap: true;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .6;
+  }
+}
