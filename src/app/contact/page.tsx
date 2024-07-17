@@ -15,7 +15,7 @@ const contact = () => {
     const phone = formData.get('phone');
     const message = formData.get('message');
     try {
-      const response = await axios.post('/storeMessage', {
+      const response = await axios.post('/store-message', {
           name: name,
           email: email,
           phone: phone,
@@ -24,7 +24,7 @@ const contact = () => {
       console.log('Notification sent successfully');
       console.log('Response:', response.data);
       document.body.style.cursor = 'default';
-      window.location.href = '/ThankYou';
+      window.location.href = '/thank-you';
     } catch (error) {
         console.error('Error sending notification:', error);
     }

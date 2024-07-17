@@ -256,9 +256,9 @@ export default function NewStudent() {
     }
 
     try {
-      const response = await axios.post('/storeNewStudent', resultPackage);
+      const response = await axios.post('/store-new-student', resultPackage);
       document.body.style.cursor = 'default';
-      window.location.href = '/ThankYou';
+      window.location.href = '/thank-you';
     } catch (error) {
         alert(`We are sorry ${clientName}, there has been an error submitting your form. Please try again later.`);
     }
