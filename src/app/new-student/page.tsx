@@ -338,7 +338,7 @@ export default function NewStudent() {
           <div className="checkbox-section">
             <div className="checkbox-container">
               <input name="Agree To Studio Policies" type="checkbox" checked={agreeStudioPolicies} onChange={handelAgreeSP} />
-              <h6>I have read and understand the <a href="/StudioPolicies" target="_blank">Studio Policies</a></h6>
+              <h6>I have read and understand the <a href="/studio-policies" target="_blank">Studio Policies</a></h6>
             </div>
           </div>
           <button type="submit" disabled={disableSubmit}>Submit</button>
