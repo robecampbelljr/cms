@@ -38,14 +38,14 @@ export async function POST(req) {
         for (let i = 0; i < childrenLessons.length; i++) {
           let child = childrenLessons[i];
           let childValues = [child.name, child.age, child.musicExperience, child.lessons.piano, child.lessons.sax, child.lessons.voice, parent_id];
-          let childResult = db.queryAsync(childSql, childValues)
+          let childResult = await db.queryAsync(childSql, childValues);
         }
       }
 
       // Inserting availability data
       const availabilityValues = [parent_id, daysAvailable.mon, daysAvailable.tue, daysAvailable.wed, daysAvailable.thu, daysAvailable.fri];
 
-      let availabilityResult = db.queryAsync(availablilitySql, availabilityValues);
+      let availabilityResult = await db.queryAsync(availablilitySql, availabilityValues);
 
       return NextResponse.json(({error:'Message successfully stored'}, {status: 201}))
     } catch (err) {
