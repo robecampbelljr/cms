@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const contact = () => {
 
-  let [formUnderConstruction, setFormUnderConstruction] = useState(false);
+  let [formUnderConstruction, setFormUnderConstruction] = useState(true);
 
   let sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
