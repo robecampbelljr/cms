@@ -1,9 +1,9 @@
-const db = require(`./index.js`);
+const pool = require(`./index.js`);
 
-db.queryAsync(`DROP SCHEMA IF EXISTS cms CASCADE`)
-  .then(() => db.queryAsync(`CREATE SCHEMA cms`))
+pool.query(`DROP SCHEMA IF EXISTS cms CASCADE`)
+  .then(() => pool.query(`CREATE SCHEMA cms`))
   .then(() => {
-    db.queryAsync(`CREATE TABLE cms.messages (
+    pool.query(`CREATE TABLE cms.messages (
       name VARCHAR NOT NULL,
       datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       email VARCHAR NOT NULL,
@@ -13,7 +13,7 @@ db.queryAsync(`DROP SCHEMA IF EXISTS cms CASCADE`)
   })
   .catch((err) => {console.log('Error:' + err)})
   .then(() => {
-    db.queryAsync(`CREATE TABLE cms.parent (
+    pool.query(`CREATE TABLE cms.parent (
      parent_id SERIAL PRIMARY KEY,
      name VARCHAR,
      phone VARCHAR,
@@ -31,7 +31,7 @@ db.queryAsync(`DROP SCHEMA IF EXISTS cms CASCADE`)
   })
   .catch((err) => {console.log('Error:' + err)})
   .then(() => {
-    db.queryAsync(`CREATE TABLE cms.child (
+    pool.query(`CREATE TABLE cms.child (
       child_id SERIAL PRIMARY KEY,
       name VARCHAR,
       age INTEGER,
@@ -44,7 +44,7 @@ db.queryAsync(`DROP SCHEMA IF EXISTS cms CASCADE`)
   })
   .catch((err) => {console.log('Error:' + err)})
   .then(() => {
-    db.queryAsync(`CREATE TABLE cms.days_available (
+    pool.query(`CREATE TABLE cms.days_available (
       days_id SERIAL PRIMARY KEY,
       parent_id INTEGER,
       mon BOOLEAN,
