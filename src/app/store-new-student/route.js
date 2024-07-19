@@ -1,4 +1,4 @@
-import db from '../../../db/index.js';
+import pool from '../../../db';
 import { NextResponse } from 'next/server.js';
 
 export async function POST(req) {
@@ -13,7 +13,7 @@ export async function POST(req) {
       childrenLessons = [];
     }
 
-    console.log(`Name: ${clientName}\nEmail: ${clientEmail}\nPhone: ${clientPhone}\nClient Wants: ${clientWantsLessons}\nLessons: Piano-${piano} Saxophone-${sax} Voice-${voice}\nLocation: ${location}\nDays: ${JSON.stringify(daysAvailable)}\nHow: ${learnAboutUs}\nMessage: ${message}\nChildren: ${JSON.stringify(childrenLessons)}`);
+    // console.log(`Name: ${clientName}\nEmail: ${clientEmail}\nPhone: ${clientPhone}\nClient Wants: ${clientWantsLessons}\nLessons: Piano-${piano} Saxophone-${sax} Voice-${voice}\nLocation: ${location}\nDays: ${JSON.stringify(daysAvailable)}\nHow: ${learnAboutUs}\nMessage: ${message}\nChildren: ${JSON.stringify(childrenLessons)}`);
 
     try {
 
@@ -34,22 +34,25 @@ export async function POST(req) {
 
       // Inserting Parent Data and getting back parent_id
       const parentValues = [clientName, clientPhone, clientEmail, clientWantsLessons, piano, sax, voice, learnAboutUs, message, clientMusicExp];
-      const parentResult = await db.queryAsync(parentSql, parentValues);
-      let parent_id = parentResult[0].rows[0].parent_id;
+      // NEW QUERY BELOW
+      const parentResult = await pool.query(parentSql, parentValues);
+      let parent_id = parentResult.rows[0].parent_id;
+      console.log(JSON.stringify(parentResult));
 
       // Inserting child data
       if (childrenLessons != undefined && childrenLessons.length > 0) {
         for (let i = 0; i < childrenLessons.length; i++) {
           let child = childrenLessons[i];
           let childValues = [child.name, child.age, child.musicExperience, child.lessons.piano, child.lessons.sax, child.lessons.voice, parent_id];
-          let childResult = await db.queryAsync(childSql, childValues);
+          // NEW QUERY BELOW
+          let childResult = await pool.query(childSql, childValues);
         }
       }
 
       // Inserting availability data
       const availabilityValues = [parent_id, daysAvailable.mon, daysAvailable.tue, daysAvailable.wed, daysAvailable.thu, daysAvailable.fri];
-
-      let availabilityResult = await db.queryAsync(availablilitySql, availabilityValues);
+      // NEW QUERY BELOW
+      let availabilityResult = await pool.query(availablilitySql, availabilityValues);
 
       return NextResponse.json(({error:'Message successfully stored'}, {status: 201}))
     } catch (err) {
