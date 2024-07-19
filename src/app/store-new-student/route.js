@@ -9,7 +9,11 @@ export async function POST(req) {
     let sax = clientLessons.sax;
     let voice = clientLessons.voice;
 
-    // console.log(`Name: ${clientName}\nEmail: ${clientEmail}\nPhone: ${clientPhone}\nClient Wants: ${clientWantsLessons}\nLessons: Piano-${piano} Saxophone-${sax} Voice-${voice}\nLocation: ${location}\nDays: ${daysAvailable}\nHow: ${learnAboutUs}\nMessage: ${message}\nChildren: ${childrenLessons}`);
+    if (childrenLessons[0].name === undefined && childrenLessons[0].age === undefined && childrenLessons[0].lessons === undefined) {
+      childrenLessons = [];
+    }
+
+    console.log(`Name: ${clientName}\nEmail: ${clientEmail}\nPhone: ${clientPhone}\nClient Wants: ${clientWantsLessons}\nLessons: Piano-${piano} Saxophone-${sax} Voice-${voice}\nLocation: ${location}\nDays: ${JSON.stringify(daysAvailable)}\nHow: ${learnAboutUs}\nMessage: ${message}\nChildren: ${JSON.stringify(childrenLessons)}`);
 
     try {
 
