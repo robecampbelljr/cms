@@ -3,8 +3,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import banner from '../images/lessonbanner.png';
 import axios from "axios";
+import { useState } from 'react';
 
 const contact = () => {
+
+  let [formUnderConstruction, setFormUnderConstruction] = useState(true);
 
   let sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,7 +38,7 @@ const contact = () => {
       <Header image={banner}/>
       <h1 className="lesson-header cursive flex-center"><u>Contact</u></h1>
       <div className="form-container">
-        <form onSubmit={sendMessage}>
+        {formUnderConstruction ? <h1>Sorry! This form is still under construciton. Please contact us by email or phone below!</h1> : <form onSubmit={sendMessage}>
           <h3>*Name:</h3>
           <input name="name" type="text" required></input>
           <h3>*E-Mail:</h3>
@@ -46,7 +49,7 @@ const contact = () => {
           <textarea name="message" required></textarea>
           <button type="submit">Submit</button>
           <h3 style={{marginTop: '20px'}}>* = Required fields</h3>
-        </form>
+        </form>}
       </div>
       <Footer />
     </div>

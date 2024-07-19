@@ -41,6 +41,7 @@ export default function NewStudent() {
   let [selfSaxCheck, setSelfSaxCheck] = useState(false);
   let [selfVoiceCheck, setSelfVoiceCheck] = useState(false);
   let [allChildrenChecked, setAllChildrenChecked] = useState(false);
+  let [formUnderConstruction, setFormUnderConstruction] = useState(true);
 
   useEffect(() => {
     let experience = false;
@@ -269,7 +270,7 @@ export default function NewStudent() {
       <Header image={banner} />
       <h1 id="title" className="lesson-header cursive flex-center">New Student Form</h1>
       <div className="form-container">
-        <form onSubmit={handelSubmit}>
+        {formUnderConstruction ? <h1>Sorry! This form is still under construciton. Please contact us by email or phone below!</h1> : <form onSubmit={handelSubmit}>
         <h3>*Name:</h3>
         <input name="name" type="text" onChange={handelNameChange} required></input>
         <h3>*Phone</h3>
@@ -342,7 +343,7 @@ export default function NewStudent() {
             </div>
           </div>
           <button type="submit" disabled={disableSubmit}>Submit</button>
-        </form>
+        </form>}
       </div>
       <Footer />
     </div>
