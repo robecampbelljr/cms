@@ -41,7 +41,7 @@ export default function NewStudent() {
   let [selfSaxCheck, setSelfSaxCheck] = useState(false);
   let [selfVoiceCheck, setSelfVoiceCheck] = useState(false);
   let [allChildrenChecked, setAllChildrenChecked] = useState(false);
-  let [formUnderConstruction, setFormUnderConstruction] = useState(true);
+  let [formUnderConstruction, setFormUnderConstruction] = useState(false);
 
   useEffect(() => {
     let experience = false;

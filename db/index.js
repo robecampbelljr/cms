@@ -1,4 +1,3 @@
-const Promise = require('bluebird');
 const { Pool } = require('pg');
 require('dotenv').config();
 
@@ -12,6 +11,5 @@ const pool = new Pool ({
   port: env.PGPORT,
 });
 
-const db = Promise.promisifyAll(pool, { multiArgs: true });
 
-module.exports = db;
+module.exports = pool;

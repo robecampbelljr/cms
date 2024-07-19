@@ -1,5 +1,4 @@
-import axio from 'axios';
-import db from '../../../db/index.js';
+import pool from '../../../db';
 import { NextResponse } from 'next/server.js';
 
 export async function POST(req) {
@@ -13,7 +12,7 @@ export async function POST(req) {
         RETURNING *
       `;
       const values = [name, email, phone, message];
-      const result = await db.queryAsync(sendSql, values);
+      const result = await pool.query(sendSql, values);
       return NextResponse.json(({error:'Message successfully stored'}, {status: 201}))
     } catch (err) {
       console.error('Error inserting message:', err);
