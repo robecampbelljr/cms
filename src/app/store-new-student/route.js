@@ -13,8 +13,6 @@ export async function POST(req) {
       childrenLessons = [];
     }
 
-    // console.log(`Name: ${clientName}\nEmail: ${clientEmail}\nPhone: ${clientPhone}\nClient Wants: ${clientWantsLessons}\nLessons: Piano-${piano} Saxophone-${sax} Voice-${voice}\nLocation: ${location}\nDays: ${JSON.stringify(daysAvailable)}\nHow: ${learnAboutUs}\nMessage: ${message}\nChildren: ${JSON.stringify(childrenLessons)}`);
-
     try {
 
       // Queries
@@ -37,7 +35,6 @@ export async function POST(req) {
       // NEW QUERY BELOW
       const parentResult = await pool.query(parentSql, parentValues);
       let parent_id = parentResult.rows[0].parent_id;
-      console.log(JSON.stringify(parentResult));
 
       // Inserting child data
       if (childrenLessons != undefined && childrenLessons.length > 0) {
