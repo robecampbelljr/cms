@@ -17,8 +17,8 @@ export async function POST(req) {
 
       // Queries
       const parentSql = `
-        INSERT INTO cms.parent (name, phone, email, want_lessons, piano, sax, voice, learn_about_us, message, music_exp)
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+        INSERT INTO cms.parent (name, phone, email, want_lessons, piano, sax, voice, learn_about_us, location, message, music_exp)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
         RETURNING parent_id;
         `;
       const childSql = `
@@ -31,7 +31,7 @@ export async function POST(req) {
       `;
 
       // Inserting Parent Data and getting back parent_id
-      const parentValues = [clientName, clientPhone, clientEmail, clientWantsLessons, piano, sax, voice, learnAboutUs, message, clientMusicExp];
+      const parentValues = [clientName, clientPhone, clientEmail, clientWantsLessons, piano, sax, voice, learnAboutUs, location, message, clientMusicExp];
       // NEW QUERY BELOW
       const parentResult = await pool.query(parentSql, parentValues);
       let parent_id = parentResult.rows[0].parent_id;
