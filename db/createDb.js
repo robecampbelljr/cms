@@ -24,8 +24,8 @@ pool.query(`DROP SCHEMA IF EXISTS cms CASCADE`)
      piano BOOLEAN,
      sax BOOLEAN,
      voice BOOLEAN,
-     days_id INTEGER,
      learn_about_us VARCHAR,
+     location VARCHAR,
      message VARCHAR
     )`)
   })
