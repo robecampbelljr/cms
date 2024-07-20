@@ -29,6 +29,7 @@ html, body {
     max-height: 40vh;
   }
   .banner h1 {
+    font-size: xx-large;
     top: 5%;
     left: 15%;
   }
@@ -40,6 +41,9 @@ html, body {
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
+  }
+  .info-section h5 {
+    font-size: x-large;
   }
   .blurb-section {
     flex-direction: row;
@@ -177,9 +181,9 @@ html, body {
     max-height: 200px;
   }
   .banner h1 {
-    font-size: large;
-    top: 8%;
-    left: 15%;
+    font-size: x-large;
+    top: 9%;
+    left: 20%;
   }
   .menu {
     width: 50vw;
@@ -191,6 +195,12 @@ html, body {
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
+  }
+  .info-section p {
+    font-size: x-large;
+  }
+  .info-section h5 {
+    font-size: large;
   }
   .info-section .image {
     display: none;
@@ -324,7 +334,11 @@ html, body {
 }
 
 .info-section p {
-  font-family: 'Lucida Handwriting', cursive;;
+  font-family: 'Lucida Handwriting', cursive;
+}
+
+.info-section h5 {
+  margin: 0;
 }
 
 .info-section .image {
