@@ -52,7 +52,7 @@ const ChildForm: React.FC<ChildFormProps> = ({childNumber, allChildrenChecked, s
       </div>
       <Instruments pianoName={`${childNumber}-piano`} saxName={`${childNumber}-sax`} voiceName={`${childNumber}-voice`} pianoState={pianoState} saxState={saxState} voiceState={voiceState} setPianoState={setPianoState} setSaxState={setSaxState} setVoiceState={setVoiceState} />
       <div className="checkbox-section">
-        <h5>*Prior Music Experience:</h5>
+        <h5>*Prior Music Instruction:</h5>
         <div className="checkbox-container">
           <h6>Yes</h6>
           <input name={`${childNumber}-music-exp-yes`} type="checkbox" checked={expYes} onChange={handelExpYes}></input>
