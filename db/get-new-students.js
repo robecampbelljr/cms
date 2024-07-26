@@ -15,7 +15,7 @@ async function fetchData() {
         let availabilityData = await pool.query(`select * from cms.days_available where parent_id = ${parent.parent_id};`);
         let daysAvailable = availabilityData.rows[0];
 
-        console.log(`Time: ${parent.timestamp}\nName: ${parent.name}\nPhone: ${parent.phone}\nEmail: ${parent.email}\nHear About Us: ${parent.learn_about_us}\nLocation: ${parent.location}\nLessons: ${parent.want_lessons ? `They want to take ${parent.piano ? 'Piano ' : ''}${parent.sax ? 'Saxophone ' : ''}${parent.voice ? 'Voice.' : ''}` : 'They do not want lessons.'}\nMessage: ${parent.message}`);
+        console.log(`Time: ${parent.timestamp}\nName: ${parent.name}\nPhone: ${parent.phone}\nEmail: ${parent.email}\nHear About Us: ${parent.learn_about_us}\nLocation: ${parent.location}\nLessons: ${parent.want_lessons ? `Parent wants to take ${parent.piano ? 'Piano ' : ''}${parent.sax ? 'Saxophone ' : ''}${parent.voice ? 'Voice.' : ''}` : 'Parent does not want lessons.'}\nMessage: ${parent.message}`);
 
         if (Array.isArray(childList) && childList.length > 0) {
           console.log(`\nChildren:`)

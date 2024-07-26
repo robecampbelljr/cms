@@ -144,7 +144,7 @@ export default function NewStudent() {
           <h2>{clientName != "" ? clientName : "Self"}</h2>
           <Instruments pianoName={`self-piano`} saxName={`self-sax`} voiceName={`self-voice`} pianoState={selfPianoCheck} saxState={selfSaxCheck} voiceState={selfVoiceCheck} setPianoState={setSelfPianoCheck} setSaxState={setSelfSaxCheck} setVoiceState={setSelfVoiceCheck}/>
           <div className="checkbox-section">
-            <h5>*Prior Music Experience:</h5>
+            <h5>*Prior Music Instruction:</h5>
             <div className="checkbox-container">
               <h6>Yes</h6>
               <input name="self-music-exp-yes" type="checkbox" checked={expYes} onChange={handelSelfExpYes}></input>
