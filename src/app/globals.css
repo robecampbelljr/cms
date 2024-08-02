@@ -566,11 +566,19 @@ padding: 15px;
 .bio h3 {
   margin-bottom: 0px;
   padding-bottom: 0px;
+  font-size: x-large;
 }
 
 .bio h4 {
   margin-top: 0px;
   padding-top: 0px;
+}
+
+.bio h6 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 2;
+  font-weight: 400;
 }
 
 .policy {
