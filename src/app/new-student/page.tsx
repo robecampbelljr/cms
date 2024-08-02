@@ -181,6 +181,17 @@ export default function NewStudent() {
     return childrenComponent;
   }
 
+  let locationWarning = () => {
+
+    if (location === 'home-kuna' || location === 'home-travel') {
+      return (
+        <div style={{marginTop:"15px"}}>Currently the only teacher availabe for travel is Mr. Robert.</div>
+      )
+    } else {
+      return null;
+    }
+  }
+
   const handelSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     document.body.style.cursor = 'progress';
@@ -334,6 +345,7 @@ export default function NewStudent() {
             <option value="home-kuna">In-home (Kuna)</option>
             <option value="home-travel">In-home (Outside Kuna)</option>
           </select>
+          {locationWarning()}
           <h3>Questions or comments:</h3>
           <textarea name="message" onChange={handleQaAchange}></textarea>
           <div className="checkbox-section">
