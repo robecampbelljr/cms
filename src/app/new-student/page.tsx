@@ -185,10 +185,16 @@ export default function NewStudent() {
 
     if (location === 'home-kuna' || location === 'home-travel') {
       return (
-        <div style={{marginTop:"15px"}}>Currently the only teacher availabe for travel is Mr. Robert.</div>
+        <div style={{marginTop:"15px"}}>*Currently Mr. Robert is our only in-home teacher.</div>
       )
     } else {
       return null;
+    }
+  }
+
+  let travelFeeWarning = () => {
+    if (location === 'home-travel') {
+      return <div style={{marginTop:"15px"}}>*There is a $25 per month travel fee.</div>
     }
   }
 
@@ -346,6 +352,7 @@ export default function NewStudent() {
             <option value="home-travel">In-home (Outside Kuna)</option>
           </select>
           {locationWarning()}
+          {travelFeeWarning()}
           <h3>Questions or comments:</h3>
           <textarea name="message" onChange={handleQaAchange}></textarea>
           <div className="checkbox-section">

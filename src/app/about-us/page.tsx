@@ -23,7 +23,7 @@ const aboutus = () => {
           <div className="bio">
             <h3 id="erica" className="cursive">Erica</h3>
             <h6><i>Available in-studio</i></h6>
-            <h4>Advanced Piano</h4>
+            <h4>Intermediate and Advanced Piano</h4>
             <p>{ericaBio}</p>
             <p>{ericaBio2}</p>
           </div>
