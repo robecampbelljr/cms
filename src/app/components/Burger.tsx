@@ -11,7 +11,6 @@ export default function Burger() {
         <ul>
           <li className="cursive pointer"><a href="/">Home</a></li>
           <li className="cursive"><a href="/about-us">About Us</a></li>
-          <li className="cursive"><a href="/contact">Contact Us</a></li>
           <li className="cursive"><a href="/new-student">Enrollment</a></li>
           <li className="cursive"><a href="/faqs">FAQs</a></li>
           <li className="cursive pointer" onClick={() => {setStudioInfo(!studioInfo)}}>Studio Info</li>
