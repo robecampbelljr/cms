@@ -2,16 +2,16 @@ const pool = require(`./index.js`);
 
 pool.query(`DROP SCHEMA IF EXISTS cms CASCADE`)
   .then(() => pool.query(`CREATE SCHEMA cms`))
-  .then(() => {
-    pool.query(`CREATE TABLE cms.messages (
-      name VARCHAR NOT NULL,
-      datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      email VARCHAR NOT NULL,
-      phone VARCHAR(12),
-      message VARCHAR NOT NULL
-    )`)
-  })
-  .catch((err) => {console.log('Error:' + err)})
+  // .then(() => {
+  //   pool.query(`CREATE TABLE cms.messages (
+  //     name VARCHAR NOT NULL,
+  //     datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  //     email VARCHAR NOT NULL,
+  //     phone VARCHAR(12),
+  //     message VARCHAR NOT NULL
+  //   )`)
+  // })
+  // .catch((err) => {console.log('Error:' + err)})
   .then(() => {
     pool.query(`CREATE TABLE cms.parent (
      parent_id SERIAL PRIMARY KEY,

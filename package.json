@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "builddb": "node ./db/createDb.js",
-    "getmessages": "node ./db/retrieve-messages.js",
     "getstudents": "node ./db/get-new-students.js"
   },
   "dependencies": {
