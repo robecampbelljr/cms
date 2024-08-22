@@ -294,7 +294,7 @@ export default function NewStudent() {
         <input name="phone" type="tel" required></input>
         <h3>*E-Mail</h3>
         <input name="email" type="email" required></input>
-        <h3>*Who are you registering?</h3>
+        <h3>*Who are you interested for?</h3>
         <div className="checkbox-section">
           <div className="checkbox-container">
             <h6>Self</h6>
