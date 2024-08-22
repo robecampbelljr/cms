@@ -8,9 +8,7 @@ const Footer = () => {
     <>
     <footer>
         <section className="address">
-          <Link href="/contact" passHref legacyBehavior>
-            <h3 className="pointer">Contact us:</h3>
-          </Link>
+          <h3>Contact us:</h3>
           <h4>Campbell Music Studio, LLC</h4>
           Email: campbellfamilymusic@gmail.com<br></br>
           Phone: +208-922-7289<br></br>
