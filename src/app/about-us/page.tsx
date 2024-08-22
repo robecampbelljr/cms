@@ -15,14 +15,14 @@ const aboutus = () => {
         <div className="bios">
           <div className="bio">
             <h3 id="robert" className="cursive">Robert</h3>
-            <h6><i>Available in-studio and travel</i></h6>
+            <h6><i>Available in-studio and in-home</i></h6>
             <h4>Beginner Piano, Saxophone, Voice</h4>
             <p>{robertBio}</p>
             <p>{robertBio2}</p>
           </div>
           <div className="bio">
             <h3 id="erica" className="cursive">Erica</h3>
-            <h6><i>Available in-studio</i></h6>
+            <h6><i>Available in-studio only</i></h6>
             <h4>Intermediate and Advanced Piano</h4>
             <p>{ericaBio}</p>
             <p>{ericaBio2}</p>
