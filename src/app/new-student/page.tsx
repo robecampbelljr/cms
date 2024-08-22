@@ -185,7 +185,7 @@ export default function NewStudent() {
 
     if (location === 'home-kuna' || location === 'home-travel') {
       return (
-        <div style={{marginTop:"15px"}}>*Currently Mr. Robert is our only in-home teacher.</div>
+        <div style={{marginTop:"15px"}}>*Currently <a href="/about-us#robert" target="_blank">Mr. Robert</a> is our only in-home teacher.</div>
       )
     } else {
       return null;
@@ -194,7 +194,7 @@ export default function NewStudent() {
 
   let travelFeeWarning = () => {
     if (location === 'home-travel') {
-      return <div style={{marginTop:"15px"}}>*There is a $25 per month travel fee.</div>
+      return <div style={{marginTop:"15px"}}>*There is a $25 per family, per month travel fee.</div>
     }
   }
 
@@ -285,7 +285,7 @@ export default function NewStudent() {
   return (
     <div className="app">
       <Header image={banner} />
-      <h1 id="title" className="lesson-header cursive flex-center">New Student Form</h1>
+      <h1 id="title" className="lesson-header cursive flex-center">New Student Interest Form</h1>
       <div className="form-container">
         {formUnderConstruction ? <h1>Sorry! This form is still under construciton. Please contact us by email or phone below!</h1> : <form onSubmit={handelSubmit}>
         <h3>*Name:</h3>
