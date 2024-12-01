@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export const faqs = [{id: 'rates', q: 'What are your rates?', a: 'Tuition is $25 per lesson. Lessons are 30 minute sessions weekly. Tuition is billed monthly and due by the 10th of each month. Please see our Studio Policies for additional info. '},
 {id: 'siblings', q: 'Do you offer a sibling discount?', a: 'No, we do not offer sibling discounts at this time.'},
 {id: 'multiples', q: 'Can you teach more than one student at a time? Do you offer shorter lesson times or lessons every other week?', a: 'We offer private, weekly 30 minute lessons only. This ensures that each student is receiving an individualized music education that is adapted to their needs and strengths. Instruction includes learning to read music, playing by ear, theory, composition, technique, and performance - that’s a lot to pack into a half hour and we maximize our time accordingly! Regular, weekly lessons ensure optimal progression in all areas of musical ability.'},
