@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const faqs = [{id: 'rates', q: 'What are your rates?', a: 'Tuition is $25 per lesson. Lessons are 30 minute sessions weekly. Tuition is billed monthly and due by the 10th of each month. Please see our Studio Policies for additional info. '},
 {id: 'siblings', q: 'Do you offer a sibling discount?', a: 'No, we do not offer sibling discounts at this time.'},
 {id: 'multiples', q: 'Can you teach more than one student at a time? Do you offer shorter lesson times or lessons every other week?', a: 'We offer private, weekly 30 minute lessons only. This ensures that each student is receiving an individualized music education that is adapted to their needs and strengths. Instruction includes learning to read music, playing by ear, theory, composition, technique, and performance - that’s a lot to pack into a half hour and we maximize our time accordingly! Regular, weekly lessons ensure optimal progression in all areas of musical ability.'},
@@ -6,9 +8,10 @@ export const faqs = [{id: 'rates', q: 'What are your rates?', a: 'Tuition is $25
 {id: 'travel', q: 'Is there a travel fee?', a: 'For travel outside of Kuna, there is an additional $25 fee per family, per month.'},
 {id: 'ownpiano', q: 'Do I need to own a piano?', a: 'For piano lessons, a piano or full-sized (88-key), weighted keyboard to practice on at home is required. Daily practice is essential for progress! Students will be expected to practice assigned pieces at home between lessons.'},
 {id: 'books', q: 'Are there any books I need to buy?', a: 'Yes. A required materials form is provided before lessons begin.'},
-{id: 'trial', q: 'Do you offer a trial lesson?', a: 'Yes! We offer one free trial lesson upon request. Trial lessons will be scheduled during the last week of each month.'},
+{id: 'trial', q: 'Do you offer a trial lesson?', a: 'Yes! We offer one free trial lesson upon request.'},
 {id: 'homeschool', q: 'My kids are homeschooled. Do you offer lesson times available in the mornings or early afternoons?', a: 'Yes we do! Our lesson schedule specifically caters to homeschool families.'},
-{id: 'reciepts', q: 'We are part of Tech Trep/Harmony/Home Ed 360/Overture. Can you sign receipts?', a: 'We sure can! We are familiar with the format required and will provide tuition receipts each month.'},
+{id: 'reciepts', q: 'We are part of Braintree Academy/Harmony/Home Ed 360/Overture. Can you sign receipts?', a: 'We sure can! We are familiar with the format required and will provide tuition receipts each month.'},
+{id: 'classwallet', q: 'Are you Empowering Parents (ClassWallet) vendors?', a: `Yes! You can submit your monthly invoice from Campbell Music Studio to ClassWallet for payment. For detailed instuctions on how to accomplish this, visit the <a href="https://classwallet.my.site.com/classwallet/s/article/How-to-pay-a-vendor" target="_blank">ClassWallet website</a>.`},
 {id: 'dropoff', q: 'Should I drop my student off for lessons? Or can I stay and watch?', a: 'That is up to you! You are welcome to drop off, or you can stay and observe the lesson.'},
 {id: 'summers', q: 'Do you take summers off?', a: 'Lessons continue during the summer, however we are flexible with scheduling lessons around vacations.'},
 {id: 'recitals', q: 'Do you hold recitals?', a: 'Yes, we hold studio recitals in May and December. These are optional but highly encouraged! Performing is an invaluable experience that develops confidence and musical expertise. Other opportunities for performing in the community are offered periodically. As a member of the TVMTA, students are eligible to participate in C of A as well as festivals and competitions throughout the year.'}];
