@@ -4,4 +4,4 @@ export const saxophoneList = ['Ages 9 and up', 'Soprano, alto, or tenor saxophon
 
 export const voiceList = ['Ages 8 and up', 'Foundation of classical voice technique ', 'Solid foundation in music theory, ear training, sight reading, and music appreciation', 'Develop your unique style (classical, popular, jazz, musical theater)', 'Two recitals a year plus other performing opportunities in the community'];
 
-export const lessonList = ['Piano, voice, and saxophone lessons offered', 'Private, weekly 30 minute lessons ($25/lesson) for an individualized music education', 'Lessons available in your home (travel fee may apply) or in-studio (located in Kuna)', 'Emphasis on both ear training and reading music', 'Regular performance opportunities'];
+export const lessonList = ['Piano, voice, and saxophone lessons offered', 'Private, weekly 30 minute lessons ($25/lesson) for an individualized music education', 'Lessons available in your home (Kuna, Nampa, Melba, Meridian, and Boise - travel fee may apply) or in-studio (located in Kuna)', 'Emphasis on both ear training and reading music', 'Regular performance opportunities'];
