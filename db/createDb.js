@@ -26,6 +26,7 @@ pool.query(`DROP SCHEMA IF EXISTS cms CASCADE`)
      voice BOOLEAN,
      learn_about_us VARCHAR,
      location VARCHAR,
+     home_city VARCHAR,
      message VARCHAR
     )`)
   })
