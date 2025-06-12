@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 80",
     "lint": "next lint",
     "builddb": "node ./db/createDb.js",
     "getstudents": "node ./db/get-new-students.js"
