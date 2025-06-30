@@ -193,7 +193,7 @@ export default function NewStudent() {
   }
 
   let travelFeeWarning = () => {
-    if (location === 'home-travel') {
+    if (location === 'In-Home-Boise' || location === 'In-Home-Melba' || location === 'In-Home-Meridian' || location === 'In-Home-Nampa') {
       return <div style={{marginTop:"15px"}}>*There is a $25 per family, per month travel fee.</div>
     }
   }
@@ -346,12 +346,12 @@ export default function NewStudent() {
           <h3>*Preferred location:</h3>
           <select name="location" value={location} onChange={handelLocationChange} required>
             <option value="">Select One</option>
-            <option value="In Studio">In Studio (Kuna)</option>
-            <option value="In Home-Boise">In Home (Boise)</option>
-            <option value="In Home-Kuna">In Home (Kuna)</option>
-            <option value="In Home-Melba">In Home (Melba)</option>
-            <option value="In Home-Meridian">In Home (Meridian)</option>
-            <option value="In Home-Nampa">In Home (Nampa)</option>
+            <option value="In-Studio">In Studio (Kuna)</option>
+            <option value="In-Home-Boise">In Home (Boise)</option>
+            <option value="In-Home-Kuna">In Home (Kuna)</option>
+            <option value="In-Home-Melba">In Home (Melba)</option>
+            <option value="In-Home-Meridian">In Home (Meridian)</option>
+            <option value="In-Home-Nampa">In Home (Nampa)</option>
           </select>
           {locationWarning()}
           {travelFeeWarning()}
