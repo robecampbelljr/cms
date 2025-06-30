@@ -336,20 +336,22 @@ export default function NewStudent() {
           <h3>How did you hear about us?</h3>
           <select name="hear-about" value={hearAbout} onChange={handelHearAboutChange}>
             <option value="">Select One</option>
-            <option value="Facebook Friend/Post">Facebook Friend/Post</option>
-            <option value="Facebook Ad">Facebook Ad</option>
-            <option value="Empower Parents Grant">Empowering Parents Grant</option>
-            <option value="Internet search">Internet Search</option>
-            <option value="Friend">Friend</option>
-            <option value="Flyer">Flyer</option>
-            <option value="Other">Other</option>
+            <option value="Dunkley Music">Dunkley Music</option>
+            <option value="Empowering Parents">Empowering Parents</option>
+            <option value="Facebook post">Facebook post</option>
+            <option value="Friend/family">Friend/family</option>
+            <option value="Home Ed 360">Home Ed 360</option>
+            <option value="Internet search">Internet search</option>
           </select>
           <h3>*Preferred location:</h3>
           <select name="location" value={location} onChange={handelLocationChange} required>
             <option value="">Select One</option>
-            <option value="studio">In studio (Kuna)</option>
-            <option value="home-kuna">In-home (Kuna)</option>
-            <option value="home-travel">In-home (Outside Kuna)</option>
+            <option value="In Studio">In Studio (Kuna)</option>
+            <option value="In Home-Boise">In Home (Boise)</option>
+            <option value="In Home-Kuna">In Home (Kuna)</option>
+            <option value="In Home-Melba">In Home (Melba)</option>
+            <option value="In Home-Meridian">In Home (Meridian)</option>
+            <option value="In Home-Nampa">In Home (Nampa)</option>
           </select>
           {locationWarning()}
           {travelFeeWarning()}
