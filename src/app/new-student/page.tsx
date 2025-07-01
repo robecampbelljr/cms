@@ -183,7 +183,7 @@ export default function NewStudent() {
 
   let locationWarning = () => {
 
-    if (location === 'home-kuna' || location === 'home-travel') {
+    if (location === 'In-Home-Kuna' || location === 'In-Home-Boise' || location === 'In-Home-Melba' || location === 'In-Home-Meridian' || location === 'In-Home-Nampa') {
       return (
         <div style={{marginTop:"15px"}}>*Currently <a href="/about-us#robert" target="_blank">Mr. Robert</a> is our only in-home teacher.</div>
       )
