@@ -185,10 +185,10 @@ export default function NewStudent() {
 
     if (location === 'In-Home-Kuna' || location === 'In-Home-Boise' || location === 'In-Home-Melba' || location === 'In-Home-Meridian' || location === 'In-Home-Nampa') {
       return (
-        <div style={{marginTop:"15px"}}>*Currently <a href="/about-us#robert" target="_blank">Mr. Robert</a> is our only in-home teacher.</div>
+        <div style={{marginTop:"15px"}}>*We are currently <u>not</u> accepting in-home students.</div>
       )
     } else {
-      return null;
+      return null
     }
   }
 
@@ -354,7 +354,7 @@ export default function NewStudent() {
             <option value="In-Home-Nampa">In Home (Nampa)</option>
           </select>
           {locationWarning()}
-          {travelFeeWarning()}
+          {/* {travelFeeWarning()} -- we are currently not accepting in-home students, undo comment if we go back*/}
           <h3>Questions or comments:</h3>
           <textarea name="message" onChange={handleQaAchange}></textarea>
           <div className="checkbox-section">
