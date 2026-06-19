@@ -542,45 +542,6 @@ padding: 15px;
   margin-left: 40px;
 }
 
-.about-us {
-  display: flex;
-  align-items: center;
-}
-
-.bios {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-us-image {
-  width: auto;
-  height: 60vh;
-  border-radius: 10%;
-  margin-bottom: 20px;
-}
-
-.bio {
-  height: auto;
-}
-
-.bio h3 {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  font-size: x-large;
-}
-
-.bio h4 {
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-.bio h6 {
-  margin: 0px;
-  padding: 0px;
-  font-size: 2;
-  font-weight: 400;
-}
-
 .policy {
   margin-left: 10px;
 }

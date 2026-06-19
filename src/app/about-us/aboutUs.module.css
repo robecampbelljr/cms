@@ -1,3 +1,47 @@
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.aboutUsImage {
+  width: auto;
+  height: 60vh;
+  border-radius: 10%;
+  margin: 20px;
+}
+
+.bio {
+  height: auto;
+  padding: 0px 20px 0px 20px;
+}
+
+.bio h3 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: x-large;
+}
+
+.bio h4 {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.bio h6 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 2;
+  font-weight: 400;
+}
+
+.bios {
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+}
+
 .philosophy {
   width: 100%;
   display: flex;

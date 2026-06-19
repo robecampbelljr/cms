@@ -7,10 +7,6 @@ import { lessonList, pianoList, saxophoneList, voiceList } from '../component-co
 
 const lesson = () => {
 
-  let saxophone = '/src/app/images/saxophoneblurb.png';
-  let piano = '/src/app/images/pianoblurb.png';
-  let voice = '/src/app/images/singblurb.png';
-
   return(
     <div className="app">
       <Header image={banner} />

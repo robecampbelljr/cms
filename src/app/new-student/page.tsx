@@ -41,7 +41,6 @@ export default function NewStudent() {
   let [selfSaxCheck, setSelfSaxCheck] = useState(false);
   let [selfVoiceCheck, setSelfVoiceCheck] = useState(false);
   let [allChildrenChecked, setAllChildrenChecked] = useState(false);
-  let [formUnderConstruction, setFormUnderConstruction] = useState(false);
 
   useEffect(() => {
     let experience = false;
@@ -228,7 +227,6 @@ export default function NewStudent() {
     // Other fields
     const hearAbout = formData.get('hear-about');
     const location = formData.get('location');
-    const questionsAndCommentsForm = formData.get('message');
 
     // Children data
     const childrenData: ChildData[] = [];
@@ -287,7 +285,7 @@ export default function NewStudent() {
       <Header image={banner} />
       <h1 id="title" className="lesson-header cursive flex-center">New Student Interest Form</h1>
       <div className="form-container">
-        {formUnderConstruction ? <h1>Sorry! This form is still under construciton. Please contact us by email or phone below!</h1> : <form onSubmit={handelSubmit}>
+        <form onSubmit={handelSubmit}>
         <h3>*Name:</h3>
         <input name="name" type="text" onChange={handelNameChange} required></input>
         <h3>*Phone</h3>
@@ -340,7 +338,7 @@ export default function NewStudent() {
             <option value="Empowering Parents">Empowering Parents</option>
             <option value="Facebook post">Facebook post</option>
             <option value="Friend/family">Friend/family</option>
-            <option value="Home Ed 360">Home Ed 360</option>
+            <option value="IHLA">IHLA</option>
             <option value="Internet search">Internet search</option>
           </select>
           <h3>*Preferred location:</h3>
@@ -364,7 +362,7 @@ export default function NewStudent() {
             </div>
           </div>
           <button type="submit" disabled={disableSubmit}>Submit</button>
-        </form>}
+        </form>
       </div>
       <Footer />
     </div>

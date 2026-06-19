@@ -13,12 +13,12 @@ export async function POST(req) {
       `;
       const values = [name, email, phone, message];
       const result = await pool.query(sendSql, values);
-      return NextResponse.json(({error:'Message successfully stored'}, {status: 201}))
+      return NextResponse.json({error:'Message successfully stored'}, {status: 201})
     } catch (err) {
       console.error('Error inserting message:', err);
-      return NextResponse.json(({error:'Error Inserting Data'}, {status: 500}))
+      return NextResponse.json({error:'Error Inserting Data'}, {status: 500})
     }
   } else {
-    return NextResponse.json(({error:`Method ${req.method} Not Allowed`}, {status: 405}))
+    return NextResponse.json({error:`Method ${req.method} Not Allowed`}, {status: 405})
   }
 }

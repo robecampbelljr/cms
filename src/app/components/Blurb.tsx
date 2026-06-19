@@ -18,7 +18,7 @@ const Blurb: React.FC<BlurbProps> =   ({link, imgURL, text, altText}) => {
 
   if (imgURL === 'lessonblurb') {
     image = lessonblurb;
-  } else if (imgURL === 'pianoblurg') {
+  } else if (imgURL === 'pianoblurb') {
     image = pianoblurb
   } else if (imgURL === 'saxblurb') {
     image = saxblurb
