@@ -74,5 +74,9 @@
   display: flex;
   flex-direction: column;
   padding: 2%;
-}
+  align-items: center;
+  }
+  .bios p {
+    padding-left: 10px;
+  }
 }
