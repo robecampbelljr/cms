@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import banner from '../images/lessonbanner.png';
 import Image from 'next/image';
 import robert_profile from '../images/robert_profile.jpeg';
-import erica_profile from '../images/erica_profile.JPG';
+import erica_profile from '../images/erica_profile.jpeg';
 import { robertBio, robertBio2, ericaBio, ericaBio2, ericaBio3 , heading, heading2, heading3} from '../component-content/aboutus-info';
 import styles from './aboutUs.module.css';
 
