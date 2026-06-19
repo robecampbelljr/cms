@@ -32,7 +32,6 @@ export async function POST(req) {
 
       // Inserting Parent Data and getting back parent_id
       const parentValues = [clientName, clientPhone, clientEmail, clientWantsLessons, piano, sax, voice, learnAboutUs, location, message, clientMusicExp];
-      // NEW QUERY BELOW
       const parentResult = await pool.query(parentSql, parentValues);
       let parent_id = parentResult.rows[0].parent_id;
 
@@ -41,22 +40,20 @@ export async function POST(req) {
         for (let i = 0; i < childrenLessons.length; i++) {
           let child = childrenLessons[i];
           let childValues = [child.name, child.age, child.musicExperience, child.lessons.piano, child.lessons.sax, child.lessons.voice, parent_id];
-          // NEW QUERY BELOW
-          let childResult = await pool.query(childSql, childValues);
+          await pool.query(childSql, childValues);
         }
       }
 
       // Inserting availability data
       const availabilityValues = [parent_id, daysAvailable.mon, daysAvailable.tue, daysAvailable.wed, daysAvailable.thu, daysAvailable.fri];
-      // NEW QUERY BELOW
-      let availabilityResult = await pool.query(availablilitySql, availabilityValues);
+      await pool.query(availablilitySql, availabilityValues);
 
-      return NextResponse.json(({error:'Message successfully stored'}, {status: 201}))
+      return NextResponse.json({error:'Message successfully stored'}, {status: 201})
     } catch (err) {
       console.error('Error inserting message:', err);
-      return NextResponse.json(({error:'Error Inserting Data'}, {status: 500}))
+      return NextResponse.json({error:'Error Inserting Data'}, {status: 500})
     }
   } else {
-    return NextResponse.json(({error:`Method ${req.method} Not Allowed`}, {status: 405}))
+    return NextResponse.json({error:`Method ${req.method} Not Allowed`}, {status: 405})
   }
 }

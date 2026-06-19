@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import Burger from './Burger';
 import Link from 'next/link';
 
-type HearderProps = {
+type HeaderProps = {
   image: StaticImageData;
 }
 
-const Header: React.FC<HearderProps> = ({image}) => {
+const Header: React.FC<HeaderProps> = ({image}) => {
 
   let [isOpen, setIsOpen] = useState(false);
 

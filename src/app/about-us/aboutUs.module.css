@@ -1,3 +1,28 @@
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.bio h3 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: x-large;
+}
+
+.bio h4 {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.bio h6 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 2;
+  font-weight: 400;
+}
+
 .philosophy {
   width: 100%;
   display: flex;
@@ -8,4 +33,50 @@
 
 .philosophy p {
   width: 90%;
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+
+  .aboutUsImage {
+    width: auto;
+    height: 55vh;
+    border-radius: 10%;
+    margin: 0px 20px 0px 20px;
+  }
+
+  .bio {
+    height: auto;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .bios {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+}
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+
+/* Phone styles */
+@media (max-width: 767px) {
+  .aboutUsImage {
+    width: 150px;
+    height: 175px;
+    border-radius: 100%;
+    margin: 0px 20px 0px 20px;
+    order: -1;
+  }
+  .bios {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  align-items: center;
+  }
+  .bios p {
+    padding-left: 10px;
+  }
 }
