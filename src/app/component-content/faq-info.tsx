@@ -6,7 +6,7 @@ export const faqs = [{id: 'rates', q: 'What are your rates?', a: 'Tuition is $30
 {id: 'travel', q: 'Is there a travel fee?', a: 'There is an additional $25 fee per family, per month for in-home lessons.z'},
 {id: 'ownpiano', q: 'Do I need to own a piano?', a: 'For piano lessons, a piano or full-sized (88-key), weighted keyboard to practice on at home is required. Daily practice is essential for progress! Students will be expected to practice assigned pieces at home between lessons.'},
 {id: 'books', q: 'Are there any books I need to buy?', a: 'Yes. A required materials form is provided before lessons begin.'},
-{id: 'trial', q: 'Do you offer a trial lesson?', a: 'Yes! We offer one free trial lesson upon request.'},
+{id: 'trial', q: 'Do you offer a trial lesson?', a: 'Yes! We offer one free trial lesson in-studio upon request.'},
 {id: 'homeschool', q: 'My kids are homeschooled. Do you offer lesson times available in the mornings or early afternoons?', a: 'Yes we do! Our lesson schedule specifically caters to homeschool families.'},
 {id: 'reciepts', q: 'Are you an IHLA-approved vendor?', a: 'Yes we are! You can find our services on the marketplace. Please check with us for availability before purchasing.'},
 {id: 'classwallet', q: 'Are you Empowering Parents (ClassWallet) vendors?', a: `Yes! You can submit your monthly invoice from Campbell Music Studio to ClassWallet for payment. For detailed instuctions on how to accomplish this, visit the <a href="https://classwallet.my.site.com/classwallet/s/article/How-to-pay-a-vendor" target="_blank">ClassWallet website</a>.`},
