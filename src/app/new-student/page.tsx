@@ -339,7 +339,8 @@ export default function NewStudent() {
             <option value="Facebook post">Facebook post</option>
             <option value="Friend/family">Friend/family</option>
             <option value="IHLA">IHLA</option>
-            <option value="Internet search">Internet search</option>
+            <option value="Internet Search">Internet Search</option>
+            <option value="Teacher Refferal">Teacher Referral</option>
           </select>
           <h3>*Preferred location:</h3>
           <select name="location" value={location} onChange={handelLocationChange} required>
